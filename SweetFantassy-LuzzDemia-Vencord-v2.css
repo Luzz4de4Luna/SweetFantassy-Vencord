@@ -1,0 +1,206 @@
+/**
+ * @name Sweet Fantassy - Luzz & Demia
+ * @author Luzz
+ * @description Pastel kawaii Discord layout with the Luzz & Demia image as the full, un-darkened background.
+ */
+
+/* =========================================================
+   BACKGROUND
+   ========================================================= */
+#app-mount {
+    background: #c2a4ee url("https://i.ibb.co/9m6rQGZW/sexy.png") center center / cover fixed no-repeat !important;
+}
+
+/* Discord's large root layers: transparent so the image can be seen */
+#app-mount,
+#app-mount > *,
+#app-mount > * > *,
+[class*="layers_"],
+[class*="layer_"],
+[class*="app_"],
+[class*="bg_"],
+[class*="base_"] {
+    background-color: transparent !important;
+}
+
+/* Put the actual UI above the background */
+#app-mount > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================================
+   LEFT SERVER BAR
+   ========================================================= */
+[class*="guilds_"] {
+    background: rgba(221, 190, 245, 0.62) !important;
+    border-right: 1px solid rgba(255,255,255,.72) !important;
+    backdrop-filter: blur(8px) saturate(115%);
+}
+
+/* =========================================================
+   LEFT CHANNEL SIDEBAR
+   ========================================================= */
+[class*="sidebar_"] {
+    background: rgba(243, 225, 255, 0.72) !important;
+    border-right: 1px solid rgba(255,255,255,.78) !important;
+    backdrop-filter: blur(8px) saturate(115%);
+}
+
+[class*="sidebar_"] [class*="header_"] {
+    background: rgba(255,247,255,.62) !important;
+}
+
+[class*="container_"][class*="hasBanner_"] {
+    background: rgba(243,225,255,.58) !important;
+}
+
+/* =========================================================
+   MAIN CHAT
+   ========================================================= */
+[class*="chat_"],
+[class*="chatContent_"],
+[class*="content_"] {
+    background: rgba(239, 220, 252, 0.12) !important;
+}
+
+[class*="title_"] {
+    background: rgba(248, 238, 255, 0.66) !important;
+    border-bottom: 1px solid rgba(255,255,255,.75) !important;
+}
+
+/* Message list */
+[class*="messagesWrapper_"] {
+    background: transparent !important;
+}
+
+/* Soft message cards */
+[class*="message_"] {
+    background: rgba(249, 241, 255, 0.62) !important;
+    border: 1px solid rgba(255,255,255,.75) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 5px 20px rgba(90, 49, 125, .10) !important;
+    margin: 6px 14px !important;
+}
+
+[class*="message_"]:hover {
+    background: rgba(255, 248, 255, 0.76) !important;
+}
+
+/* =========================================================
+   RIGHT MEMBER LIST
+   ========================================================= */
+[class*="membersWrap_"],
+[class*="membersWrap_"] > *,
+[class*="members_"] {
+    background: transparent !important;
+}
+
+[class*="members_"] {
+    background: rgba(239, 219, 253, 0.62) !important;
+    backdrop-filter: blur(8px) saturate(115%);
+}
+
+[class*="member_"] {
+    border-radius: 13px !important;
+    margin: 2px 7px !important;
+}
+
+[class*="member_"]:hover {
+    background: rgba(255,248,255,.56) !important;
+}
+
+/* =========================================================
+   INPUT
+   ========================================================= */
+[class*="channelTextArea_"] {
+    background: rgba(250,243,255,.86) !important;
+    border: 1px solid rgba(255,255,255,.88) !important;
+    border-radius: 17px !important;
+    box-shadow: 0 4px 18px rgba(90,49,125,.12) !important;
+}
+
+[class*="scrollableContainer_"] {
+    background: transparent !important;
+}
+
+[class*="placeholder_"] {
+    color: #9a78bf !important;
+}
+
+/* =========================================================
+   USER PANEL
+   ========================================================= */
+[class*="panels_"] {
+    background: rgba(232, 207, 250, 0.74) !important;
+    border-top: 1px solid rgba(255,255,255,.72) !important;
+}
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+[class*="searchBar_"] {
+    background: rgba(250,242,255,.76) !important;
+    border: 1px solid rgba(255,255,255,.8) !important;
+    border-radius: 14px !important;
+}
+
+/* =========================================================
+   TEXT / COLORS
+   ========================================================= */
+[class*="messageContent_"],
+[class*="username_"],
+[class*="name_"],
+[class*="membersGroup_"],
+[class*="channelName_"] {
+    color: #6b4692 !important;
+}
+
+[class*="timestamp_"] {
+    color: #a078c6 !important;
+}
+
+a {
+    color: #8b60b9 !important;
+}
+
+/* =========================================================
+   POPOVERS / MENUS / TOOLTIPS
+   ========================================================= */
+[class*="popout_"],
+[class*="menu_"],
+[class*="tooltip_"] {
+    background: rgba(250,242,255,.96) !important;
+    color: #6b4692 !important;
+    border: 1px solid rgba(255,255,255,.82) !important;
+    border-radius: 14px !important;
+    box-shadow: 0 8px 28px rgba(83,45,119,.18) !important;
+}
+
+/* =========================================================
+   SCROLLBARS
+   ========================================================= */
+::-webkit-scrollbar {
+    width: 8px !important;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(139, 96, 185, .42) !important;
+    border-radius: 999px !important;
+}
+
+/* =========================================================
+   REMOVE BLUR / DARK FILTERS FROM THE BACKGROUND
+   ========================================================= */
+#app-mount::before,
+#app-mount::after {
+    display: none !important;
+}
+
+[class*="backdrop_"] {
+    background: rgba(0,0,0,0.08) !important;
+}
